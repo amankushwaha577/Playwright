@@ -6,7 +6,7 @@ export default defineConfig({
 
   use: {
     // Base URL of your Vite dev server
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:3000',
     headless: false, // open browser visually (for learning)
   },
 
