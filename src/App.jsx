@@ -1,19 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Component1 from './Components/Component1'
+import Component1 from "./Components/Component1";
+import Component2 from "./Components/Component2";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
+    <div>
+      <div className="full-section">
         <Component1 />
       </div>
-    </>
-  )
-}
 
-export default App
+      <div className="full-section">
+        <Component2 />
+      </div>
+
+      {/* Add more sections here */}
+      {/* <div className="full-section">
+        <Component3 />
+      </div> */}
+    </div>
+  );
+}

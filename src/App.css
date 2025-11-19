@@ -1,42 +1,39 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.full-section {
+  height: 100vh;   
+  width: 100vw;      
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: start;
+
+  /* BORDER between components */
+  border-bottom: 6px solid rgba(0, 0, 0, 0.1);
+
+  /* Optional spacing inside section */
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html, body {
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  box-sizing: border-box; /* Avoid elements overflowing because of padding */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Section 1 – Light Blue */
+.full-section:nth-child(1) {
+  background-color: #4632ca;
 }
 
-.card {
-  padding: 2em;
+/* Section 2 – Light Yellow */
+.full-section:nth-child(2) {
+  background-color: #289a16;
 }
 
-.read-the-docs {
-  color: #888;
+/* Section 3 – Light Green (if added later) */
+.full-section:nth-child(3) {
+  background-color: #eaffea;
 }
