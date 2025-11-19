@@ -1,20 +1,19 @@
-// playwright.config.js
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
 
   use: {
-    // Base URL of your Vite dev server
-    baseURL: 'http://localhost:3000',
-    headless: false, // open browser visually (for learning)
+    baseURL: 'http://localhost:3000', // 👈 same as Vite
+    headless: false,                  // show browser while learning
   },
 
-  // Start Vite dev server automatically before tests
+  // 👇 Playwright will run this before tests and wait for this URL
   webServer: {
     command: 'npm run dev',
-    port: 5173,
+    url: 'http://localhost:3000',     // 👈 wait until this is reachable
     reuseExistingServer: !process.env.CI,
+    timeout: 120 * 1000,              // wait up to 120s instead of 60
   },
 
   projects: [
